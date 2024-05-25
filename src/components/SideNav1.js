@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { FaDrumstickBite, FaHome } from "react-icons/fa";
 import { FaBowlRice } from 'react-icons/fa6';
 import './SideNav1.css';
+import { useState } from 'react';
 
 const SideNav1 = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const handleMouseEnter = () => {
     setVisible(true);
@@ -17,7 +18,7 @@ const SideNav1 = () => {
 
   return (
     <div
-      className={`side-nav-container ${visible ? 'visible' : ''}`}
+      className="side-nav-container"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
